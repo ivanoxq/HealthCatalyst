@@ -10,6 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need to make sure you have the following softwares installed:
 * [Visual Studio 2017](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=35000#) - Community Edition of Visual Studio 2017 (You can use other versions)
+* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.2.105-windows-x64-installer) - Visual Studio Solution is under that version and since its new most people need to install it first before using the project.
 * [Node.js and NPM](https://nodejs.org/dist/v11.12.0/node-v11.12.0-x64.msi) - Latest copy of Node.js and NPM
 
 ### Installing
