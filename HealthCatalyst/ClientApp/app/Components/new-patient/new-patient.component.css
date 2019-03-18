@@ -1,0 +1,49 @@
+.FormArea{
+    display: block;
+   right:5px;
+   left:5px;
+   bottom:5px;
+    padding-left:10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 500px;
+  }
+  .alert {
+    width: 80%;
+    padding: 3px 3px;
+    margin-bottom: 5px;
+    font-size: small;
+  }
+  
+  .col-form-label {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    font-size: medium;
+  }
+  
+  .form-control {
+    width: 90%;
+    height: 25px;
+    font-size: small;
+  
+  
+  }
+  
+  .form-group {
+  margin-bottom:5px;
+  }
+  
+  .btn {
+    background-color: DodgerBlue;
+  }
+  
+  .ng-valid[required],
+  .ng-valid.required {
+    border-left: 5px solid #42a948; /* green */
+  }
+  
+  .ng-invalid:not(form) {
+    border-left: 5px solid #a94442; /* red */
+  }
+  

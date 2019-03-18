@@ -1,0 +1,64 @@
+.Header
+{
+    padding-top:5px;
+}
+
+.AddButton {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline;
+}
+
+/* Darker background on mouse-over */
+.AddButton:hover {
+  background-color: RoyalBlue;
+}
+
+.ColItem {
+    display: block;
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.RowItem
+{
+  display: block;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.img {
+  width: 100%;
+  margin-bottom: 18%;
+}
+.card-picture {
+  flex: 1 1 30%;
+  margin-bottom: 2%;
+  height: fit-content;
+  background: #245c99;
+}
+.container {
+  min-height: 100%;
+  width: 100%;
+}
+
+.mat-card-image {
+  padding: 15px 15px 15px 15px;
+}
+
+.mat-expansion-panel {
+  background: #1e90ff
+}
+
+.property-label {
+  display: block;
+  font-weight: bold;
+}

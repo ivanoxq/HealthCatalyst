@@ -1,0 +1,1 @@
+{"version":3,"file":"karma.conf.js","sourceRoot":"","sources":["../../../karma.conf.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,GAAG,UAAC,MAAM;IACpB,MAAM,CAAC,GAAG,CAAC;QACP,QAAQ,EAAE,OAAO;QACjB,UAAU,EAAE,CAAC,SAAS,CAAC;QACvB,MAAM,EAAE;YACJ,cAAc,EAAE,IAAI;SACvB;KACJ,CAAC,CAAC;AACP,CAAC,CAAA"}

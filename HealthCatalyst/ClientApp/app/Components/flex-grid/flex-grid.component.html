@@ -1,0 +1,40 @@
+<div id="flexGrid" fxLayout="column" class="container" fxLayoutGap="10px">
+    <div fxFlex="33" class="Header page-header">
+        <button id="addPatient" class="AddButton" (click)="clickAdd()"><i class="fa fa-plus-square-o"></i> Add Patient</button>&nbsp;&nbsp;
+        <button id="genPatient" class="AddButton" (click)="clickGenerate(false)"><i class="fa fa-cog"></i> Generate Patient</button>&nbsp;&nbsp;&nbsp;
+        <button id="genBadPatient" class="AddButton" (click)="clickGenerate(true)"><i class="fa fa-cog"></i> Generate Bad Patient</button>&nbsp;&nbsp;&nbsp;
+        <app-loading-spinner2 *ngIf="ShowInputSpinner"></app-loading-spinner2>
+    </div>
+
+    <app-loading-spinner1 *ngIf="ShowDataSpinner"></app-loading-spinner1>
+
+    <div *ngIf="!ShowDataSpinner" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center" #toplayout>
+        <mat-card class="card-picture" *ngFor="let item of patients" >
+            <mat-card-title fxLayout.gt-xs="row wrap" fxLayout.xs="column">
+                <span fxFlex="auto">{{item.FirstName}}&nbsp;{{item.LastName}}</span>
+            </mat-card-title>
+            <img mat-card-image [src]="sanatizeImage(item.Image.ImageCodeBase64)" height="50%" width="50%">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                    More Info
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                
+                <label class="property-label">DOB:</label>&nbsp;{{item.DOB}}
+                <label class="property-label">Age:</label>&nbsp;{{item.Age}}
+                <label class="property-label">Gender:</label>&nbsp;{{item.Gender}}
+                <label class="property-label">Address:</label>&nbsp; {{item.Communication.Address}}
+                <label class="property-label">Zip Code:</label>&nbsp; {{item.Communication.Zip}}
+                <label class="property-label">Country:</label>&nbsp; {{item.Communication.Country}}
+                <label class="property-label">Email</label>&nbsp; {{item.Communication.Email}}
+                <label class="property-label">Phone</label>&nbsp; {{item.Communication.Phone}}
+                <label class="property-label">Interest</label>&nbsp; {{item.Description.Interest}}
+                <label class="property-label">Characteristics</label>&nbsp; {{item.Description.Characteristics}}
+            
+            </mat-expansion-panel>
+        </mat-card>
+    </div>
+    <div *ngIf="!ShowDataSpinner" fxFlex></div>
+</div>
+

@@ -1,0 +1,153 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Enter New Patient</h4>
+</div>
+<div class="modal-body">
+  <div class="FormArea">
+    <form [formGroup]="newPatientform" (submit) = "submit($event)">
+      <div class="form-group">
+        <label for="new_patient_firstName" class="col-form-label">First Name</label>
+        <input type="text"
+                id="new_patient_firstName"
+                class="form-control"
+                formControlName="FirstName"
+                required />
+      </div>
+      <div class="alert alert-danger"
+           *ngIf="!newPatientform.get('FirstName').valid && !newPatientform.get('FirstName').pristine">First Name is not valid</div>
+  
+      <div class="form-group">
+        <label for="new_patient_lastName" class="col-form-label">Last Name</label>
+        <input type="text"
+               id="new_patient_lastName"
+               class="form-control"
+               formControlName="LastName"
+               required>
+      </div>
+      <div class="alert alert-danger"
+          *ngIf="!newPatientform.get('LastName').valid && !newPatientform.get('LastName').pristine">Last Name is not valid</div>
+  
+      <div class="form-group">
+        <label for="new_patient_age" class="col-form-label">Age</label>
+        <input type="number"
+                min="18"
+                id="new_patient_age"
+                class="form-control"
+                formControlName="Age"
+                required>
+      </div>
+      <div class="alert alert-danger"
+          *ngIf="!newPatientform.get('Age').valid && !newPatientform.get('Age').pristine">Age is not valid</div>
+      
+      <div class="form-group">
+        <label for="new_patient_dob" class="col-form-label">Date Of Birth</label>
+        <input type="date"
+                id="new_patient_dob"
+                class="form-control"
+                formControlName="DOB"
+                required>
+      </div>
+      <div class="alert alert-danger"
+          *ngIf="!newPatientform.get('DOB').valid && !newPatientform.get('DOB').pristine">Date Of Birth is not valid</div>
+      
+      <div class="form-group">
+        <label for="new_patient_gender" class="col-form-label">Gender</label>
+        <input type="text"
+                id="new_patient_gender"
+                class="form-control"
+                formControlName="Gender"
+                required>
+      </div>
+      <div class="alert alert-danger"
+          *ngIf="!newPatientform.get('Gender').valid && !newPatientform.get('Gender').pristine">Gender is not valid</div>
+      
+      <div class="form-group">
+        <label for="new_patient_address" class="col-form-label">Address</label>
+        <input type="text"
+                id="new_patient_address"
+                class="form-control"
+                formControlName="Address"
+                required>
+      </div>
+      <div class="alert alert-danger"
+          *ngIf="!newPatientform.get('Address').valid && !newPatientform.get('Address').pristine">Address is not valid</div>
+      
+      <div class="form-group">
+        <label for="new_patient_zip" class="col-form-label">Zip Code</label>
+        <input type="text"
+                id="new_patient_zip"
+                class="form-control"
+                formControlName="Zip"
+                required>
+      </div>
+      <div class="alert alert-danger"
+          *ngIf="!newPatientform.get('Zip').valid && !newPatientform.get('Zip').pristine">Zip Code is not valid</div>
+      
+      <div class="form-group">
+        <label for="new_patient_country" class="col-form-label">Country</label>
+        <input type="text"
+                id="new_patient_country"
+                class="form-control"
+                formControlName="Country"
+                required>
+      </div>
+      <div class="alert alert-danger"
+          *ngIf="!newPatientform.get('Country').valid && !newPatientform.get('Country').pristine">Country is not valid</div>
+      
+
+      <div class="form-group">
+        <label for="new_patient_email" class="col-form-label">Email</label>
+        <input type="email"
+               id="new_patient_email"
+               class="form-control"
+               formControlName="Email"
+               required>
+      </div>
+      <div class="alert alert-danger"
+           *ngIf="!newPatientform.get('Email').valid && !newPatientform.get('Email').pristine">Email is not valid</div>
+  
+      <div class="form-group">
+        <label for="new_patient_phone" class="col-form-label">Phone</label>
+        <input type="tel"
+               class="form-control"
+               id="new_patient_phone"
+               formControlName="Phone"
+               required>
+      </div>
+      <div class="alert alert-danger"
+           *ngIf="!newPatientform.get('Phone').valid && !newPatientform.get('Phone').pristine">Phone is not valid</div>
+  
+      <div class="form-group">
+        <label for="new_patient_interest" class="col-form-label">Interest</label>
+        <input type="text"
+                class="form-control"
+                id="new_patient_interest"
+                formControlName="Interest">
+      </div>
+  
+      <div class="form-group">
+        <label for="new_patient_characteristics" class="col-form-label">Characteristics</label>
+        <input type="text"
+                class="form-control"
+                id="new_patient_characteristics"
+                formControlName="Characteristics">
+      </div>
+              
+      <div class="form-group">
+        <label for="new_patient_image" class="col-form-label">Image</label>&nbsp;
+        <input type="file"
+                id="new_patient_image"
+                formControlName="Image"
+                (change)="processFile($event)"
+                required>
+      </div>
+      <div class="alert alert-danger"
+            *ngIf="!newPatientform.get('Image').valid && !newPatientform.get('Image').pristine">Image is not valid</div>
+          
+      <div style="padding-top: 5px">
+        <button type="submit" class="btn btn-success" [disabled]="!newPatientform.valid">Add</button>&nbsp;
+        <button type="button" (click)="cancel()" class="btn btn-default" style="background-color: red; color: white">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</div>

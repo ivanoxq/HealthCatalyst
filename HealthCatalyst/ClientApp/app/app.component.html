@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1 text-white">Health Catalyst</span>
+  <app-search-box (onSearch) = "SearchPatient($event)" (showSpinner)="searchStarted($event)"></app-search-box>
+</nav>
+<notifier-container></notifier-container>
+<app-flex-grid (SpinnerAction)="GridSpinnerChange($event)" (ClickAddButton)="AddPatient($event)" (GenerateRandom)="AddRandomPatient($event)" [ShowDataSpinner]="showGridSpinner" [ShowInputSpinner]="showInputSpinner"></app-flex-grid>
+
+
+<ng-template #template>
+  <div style="height: 600px; scroll-behavior: auto">
+    <app-new-patient (oncancel)="onCancel($event)" (onsubmit)="onSubmit($event)"></app-new-patient>
+  </div>
+</ng-template>
